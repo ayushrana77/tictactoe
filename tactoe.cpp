@@ -110,19 +110,19 @@ int main()
         int i,j,k;
         char turn;//it varibal use to which palyer turn 
         char a[3][3]={{'*','*','*'},{'*','*','*'},{'*','*','*'}};
-        string first,player1_name,player2_name;
+        string first,player1,player2;
         cout<<"\nEnter a name for the X player"<<endl;
-        getline(cin,player1_name);
+        getline(cin,player1);
         cout<<"\nEnter a name for the O player"<<endl;
-        getline(cin,player2_name);
+        getline(cin,player2);
         // loop for which played first
         do
         {
-            cout<<"\nwho plays first "<<player1_name<<"  or  "<<player2_name<<"?"<<endl;
+            cout<<"\nwho plays first "<<player1<<"  or  "<<player2<<"?"<<endl;
             getline(cin,first);
-            if((first==player1_name)||(first==player2_name))
+            if((first==player1)||(first==player2))
                 {
-                    if(first==player1_name)
+                    if(first==player1)
                         {
                             turn='X';
                         }
@@ -138,7 +138,7 @@ int main()
     for(k=1;k<=9;k++)
         {
             //palyer_turnis function which player turn in the game and fill the poistin in matrix  
-            palyer_turn(a,&turn,player1_name,player2_name);
+            palyer_turn(a,&turn,player1,player2);
             //gameover function is when some one win the game it return true else it return false
             if(gameover(a)==true)
                 {
@@ -156,13 +156,14 @@ int main()
             // that last turn=o was palyer2(o) win the game and  turn changes to  x
             if(turn=='X')
                 {
-                    cout<<endl<<player2_name<<"  Win the game";
+                    cout<<endl<<player2<<"  Win the game "<<endl;;
                 }
              // that last turn=x was palyer1(x) win the game and  turn changes to  o
             else if(turn=='O')
                 {
-                    cout<<endl<<player1_name<<"  Win the game";
+                    cout<<endl<<player1<<"  Win the game"<<endl;
                 }
+
             
         }
     }
