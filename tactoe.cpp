@@ -2,6 +2,9 @@
 #include<string>
 #include<conio.h>
 using namespace std;
+//***************************************************Displsy*************************************
+
+
 // display functon display the matrix 
 void display(char a[3][3])
     {
@@ -17,6 +20,9 @@ void display(char a[3][3])
             }
        
     }
+//*************************************************palyer Turn******************************************
+
+
 //palyer_turnis function which player turn in the game and fill the poistin in matrix 
 void palyer_turn(char a[3][3],char *turn,string player1,string player2)
 {
@@ -77,6 +83,9 @@ void palyer_turn(char a[3][3],char *turn,string player1,string player2)
         }
     
 }
+//*************************************Game over***************************************
+
+
 //gameover function is when some one win the game it return true else it return false
 bool gameover(char a[3][3])
 {
@@ -105,6 +114,9 @@ bool gameover(char a[3][3])
     // if retun false mean no one win the match this time
     return false;
 }
+//**********************************************************main***********************************************
+
+
 int main()
     {
         int i,j,k;
